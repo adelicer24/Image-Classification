@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet"  href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+
+    <div class="title">
+        <h1>Image Classifier</h1>
+    </div>
+
+    <div class="photo-banner">
+        <h2>Images of Objects</h2>
+    </div>
+
+    <div>
+        <h2 class="description">Description</h2>
+        <ul class="bullets">
+            <li>This website allows our visitors to put our Image Classification algorithm to the test</li>
+            <li>Our algorithm has been trained to identify a set objects such as...</li>
+            <li>Our visitors will have the ability to upload an image to be processed by our algorithm</li>
+            <li>Our algorithm will identify what the image is with an accuracy percentange and its run time</li>
+            <li>Our visitors can test as many images as they'd like!</li>
+        </ul>
+    </div>
+
+    <a href="/classify">
+        <button class="button">Classify an Image</button>
+    </a>
+</html>
