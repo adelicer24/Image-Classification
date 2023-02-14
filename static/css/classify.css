@@ -4,6 +4,24 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.upload {
+    text-align: center;
+    font-size: large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button {
+    text-align: center;
+    height: 50px;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgb(0, 215, 0);
+    font-size: large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 body {
     background-color: #aaaaaa;
 }
