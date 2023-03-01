@@ -10,7 +10,7 @@ from keras.models import load_model
  
 model = load_model('model_saved.h5')
  
-image = load_img('ImageSet/test/baseballs/1.jpg', target_size=(224, 224))
+image = load_img('ImageSet/test/baseballs/b1.jpg', target_size=(224, 224))
 img = np.array(image)
 img = img / 255.0
 img = img.reshape(1,224,224,3)
