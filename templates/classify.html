@@ -6,17 +6,55 @@
     </head>
 
     <h2>
-        Upload an Image!
+        Select an Image!
     </h2>
 
-    <form method="POST" action="/classify" enctype="multipart/form-data">
-        <p>
-            <input type="file" name="file" autocomplete="off" required>
-        </p>
+    <label for="images">Select an image:</label>
+    <select id="images" name="images">
+        <option value="select" disabled selected>Select an Image</option>
+        <option value="airplane1">airplane1.jpg</option>
+        <option value="airplane2">airplane2.jpg</option>
+        <option value="airplane3">airplane3.jpg</option>
+        <option value="airplane4">airplane4.jpg</option>
+        <option value="bird1">bird1.jpg</option>
+        <option value="bird2">bird2.jpg</option>
+        <option value="bird3">bird3.jpg</option>
+        <option value="bird4">bird4.jpg</option>
+        <option value="car1">car1.jpg</option>
+        <option value="car2">car2.jpg</option>
+        <option value="car3">car3.jpg</option>
+        <option value="car4">car4.jpg</option>
+        <option value="cat1">cat1.jpg</option>
+        <option value="cat2">cat2.jpg</option>
+        <option value="cat3">cat3.jpg</option>
+        <option value="cat4">cat4.jpg</option>
+        <option value="deer1">deer1.jpg</option>
+        <option value="deer2">deer2.jpg</option>
+        <option value="deer3">deer3.jpg</option>
+        <option value="deer4">deer4.jpg</option>
+        <option value="dog1">dog1.jpg</option>
+        <option value="dog2">dog2.jpg</option>
+        <option value="dog3">dog3.jpg</option>
+        <option value="dog4">dog4.jpg</option>
+        <option value="frog1">frog1.jpg</option>
+        <option value="frog2">frog2.jpg</option>
+        <option value="frog3">frog3.jpg</option>
+        <option value="frog4">frog4.jpg</option>
+        <option value="horse1">horse1.jpg</option>
+        <option value="horse2">horse2.jpg</option>
+        <option value="horse3">horse3.jpg</option>
+        <option value="horse4">horse4.jpg</option>
+        <option value="ship1">ship1.jpg</option>
+        <option value="ship2">ship2.jpg</option>
+        <option value="ship3">ship3.jpg</option>
+        <option value="ship4">ship4.jpg</option>
+        <option value="truck1">truck1.jpg</option>
+        <option value="truck2">truck2.jpg</option>
+        <option value="truck3">truck3.jpg</option>
+        <option value="truck4">truck4.jpg</option>
+    </select>
 
-        <p>
-            <input type="submit" value="Classify!">
-        </p>
-    </form>
-
+    <a href="/results">
+        <button type="submit">Submit</button>
+    </a>
 </html>

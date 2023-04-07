@@ -9,10 +9,13 @@
         <h1>Image Results</h1>
     </div>
 
-    {% if filename %}
-    <div>
-        <img src="{{ url_for('static', filename = '/images/'+filename) }}">
+    <div class="image">
+        <img src="/static/css/images/truck3.jpg">
     </div>
-    {% endif %}
 
+    <div class="accuracy">
+        <body>
+        Accuracy: {{accuracy}}%
+        </body>
+    </div>
 </html>
