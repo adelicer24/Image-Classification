@@ -7,3 +7,16 @@
 body {
     background-color: #aaaaaa;
 }
+
+.image {
+    display: block;
+    text-align: center;
+    size: large;
+    padding-bottom: 10px;
+}
+
+.accuracy {
+    text-align: center;
+    font-size: large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
