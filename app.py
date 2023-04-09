@@ -29,11 +29,11 @@ def get_image():
 @app.route("/results")
 def results():
     os.system('python3 test.py')
-    with open ("output.txt", "r") as output:
-        accuracy = output.read()
+    with open ("prediction.txt", "r") as output:
+        prediction = output.read()
     with open ("image.txt", "r") as output:
         image = output.read()
 
-    return render_template("results.html", image=image, accuracy=accuracy)
+    return render_template("results.html", image=image, prediction=prediction)
 
 app.run(port=5000)
