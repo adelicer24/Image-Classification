@@ -8,15 +8,36 @@ body {
     background-color: #aaaaaa;
 }
 
-.image {
-    display: block;
+.image-holder {
     text-align: center;
-    size: large;
-    padding-bottom: 10px;
+    height: 333px;
 }
 
-.accuracy {
+.image {
+    height: 333px;
+    width: 500px;
+}
+
+.bullets {
+    margin-left: 35%;
+    margin-right: 28%;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button {
     text-align: center;
+    height: 50px;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgb(0, 215, 0);
     font-size: large;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button:hover, .buttonfocus {
+    color: red;
+    cursor: pointer;
 }

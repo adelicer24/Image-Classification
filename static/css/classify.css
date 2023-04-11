@@ -1,6 +1,6 @@
 .title {
     text-align: center;
-    height: 60px;
+    height: 40px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -8,6 +8,32 @@
     text-align: center;
     font-size: large;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.select {
+    height: 20px;
+}
+
+.photo-banner {
+    text-align: center;
+    height: 354px;
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.photo {
+    height: 175px;
+    width: 295px;
+}
+
+.bullets {
+    margin-left: 28%;
+    margin-right: 28%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .button {
@@ -22,6 +48,19 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.button:hover, .buttonfocus {
+    color: red;
+    cursor: pointer;
+}
+
+.error {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+
 body {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
     background-color: #aaaaaa;
 }

@@ -9,13 +9,16 @@
         <h1>Image Results</h1>
     </div>
 
-    <div class="image">
-        <img src="{{image}}">
+    <div class="image-holder">
+        <img class="image" src="{{image}}">
     </div>
 
-    <div class="accuracy">
-        <body>
-        Prediction: {{prediction}}
-        </body>
-    </div>
+    <ul class="bullets">
+        <li>The algorithm classifies the image as a: {{prediction}}</li>
+        <li>The image class was predicted in: {{runtime}}</li>
+    </ul>
+
+    <a href="/classify">
+        <button class="button">Classify Another Image!</button>
+    </a>
 </html>

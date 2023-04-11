@@ -6,10 +6,50 @@ from keras.models import load_model
  
 model = load_model('model_saved.h5')
 
-with open('image.txt', 'r') as image:
-    url = image.read()
+images = ['static/css/images/airplane1.jpg',
+          'static/css/images/airplane2.jpg',
+          'static/css/images/airplane3.jpg',
+          'static/css/images/airplane4.jpg',
+          'static/css/images/bird1.jpg',
+          'static/css/images/bird2.jpg',
+          'static/css/images/bird3.jpg',
+          'static/css/images/bird4.jpg',
+          'static/css/images/car1.jpg',
+          'static/css/images/car2.jpg',
+          'static/css/images/car3.jpg',
+          'static/css/images/car4.jpg',
+          'static/css/images/cat1.jpg',
+          'static/css/images/cat2.jpg',
+          'static/css/images/cat3.jpg',
+          'static/css/images/cat4.jpg',
+          'static/css/images/deer1.jpg',
+          'static/css/images/deer2.jpg',
+          'static/css/images/deer3.jpg',
+          'static/css/images/deer4.jpg',
+          'static/css/images/dog1.jpg',
+          'static/css/images/dog2.jpg',
+          'static/css/images/dog3.jpg',
+          'static/css/images/dog4.jpg',
+          'static/css/images/frog1.jpg',
+          'static/css/images/frog2.jpg',
+          'static/css/images/frog3.jpg',
+          'static/css/images/frog4.jpg',
+          'static/css/images/horse1.jpg',
+          'static/css/images/horse2.jpg',
+          'static/css/images/horse3.jpg',
+          'static/css/images/horse4.jpg',
+          'static/css/images/ship1.jpg',
+          'static/css/images/ship2.jpg',
+          'static/css/images/ship3.jpg',
+          'static/css/images/ship4.jpg',
+          'static/css/images/truck1.jpg',
+          'static/css/images/truck2.jpg',
+          'static/css/images/truck3.jpg',
+          'static/css/images/truck4.jpg']
 
-image = load_img(url, target_size=(32, 32))
+image_picked = images[33]
+
+image = load_img(image_picked, target_size=(32, 32))
 img = np.array(image)
 img = img / 255.0
 img = img.reshape(1,32,32,3)
@@ -39,5 +79,6 @@ if (output > 1.0e-09 and output < 9.0e-08):
 if (output > 0.01 and output < 0.5):
     prediction = "Truck"
 
-with open('prediction.txt', 'w') as f:
-    f.write(prediction)
+print(image_picked)
+print(output)
+print(prediction)

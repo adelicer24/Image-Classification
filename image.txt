@@ -1,1 +1,1 @@
-static/css/images/cat2.jpg
+static/css/images/dog4.jpg

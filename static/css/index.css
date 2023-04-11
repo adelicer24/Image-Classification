@@ -4,10 +4,24 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.photo-banner {
+.photo-banner1 {
     text-align: center;
-    height: 350px;
-    border: 2px solid black;
+    height: 175px;
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    border-bottom: transparent;
+    padding-bottom: 3px;
+}
+
+.photo-banner2 {
+    text-align: center;
+    height: 175px;
+    border-top: transparent;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    padding-top: 3px;
 }
 
 .description {
@@ -40,4 +54,54 @@
 
 body {
     background-color: #aaaaaa;
+}
+
+.ship {
+    height: 175px;
+    width: 295px;
+}
+
+.car {
+    height: 175px;
+    width: 295px;
+}
+
+.frog {
+    height: 175px;
+    width: 295px;
+}
+
+.cat {
+    height: 175px;
+    width: 295px;
+}
+
+.truck {
+    height: 175px;
+    width: 295px;
+}
+
+.airplane {
+    height: 175px;
+    width: 295px;
+}
+
+.dog {
+    height: 175px;
+    width: 295px;
+}
+
+.horse {
+    height: 175px;
+    width: 295px;
+}
+
+.bird {
+    height: 175px;
+    width: 295px;
+}
+
+.deer {
+    height: 175px;
+    width: 295px;
 }
