@@ -1,3 +1,9 @@
+# This code below to predict the class of the image was used from
+# https://www.geeksforgeeks.org/python-image-classification-using-keras/
+
+# This python file can be used by the user to test different images
+# on the model to be predicted
+
 from keras.models import load_model
 from tensorflow.keras.utils import load_img
 import numpy as np
