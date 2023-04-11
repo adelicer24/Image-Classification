@@ -4,8 +4,11 @@ import numpy as np
  
 from keras.models import load_model
  
+# This loads the saved model from when it was trained so it can be
+# used to predict the class of the images that it is tested with
 model = load_model('model_saved.h5')
 
+# This array contains all of the image paths of the testable images
 images = ['static/css/images/airplane1.jpg',
           'static/css/images/airplane2.jpg',
           'static/css/images/airplane3.jpg',
@@ -47,17 +50,36 @@ images = ['static/css/images/airplane1.jpg',
           'static/css/images/truck3.jpg',
           'static/css/images/truck4.jpg']
 
+# This variable will store the image picked by the user
 image_picked = images[33]
 
+# This function will load the image picked and compress it down to
+# 32 by 32
 image = load_img(image_picked, target_size=(32, 32))
+
+# This function converts the image into a numpy array
 img = np.array(image)
+
+# This function divides all of the values in the numpy array
 img = img / 255.0
+
+# This function reshapes dimenstion of the image in the numpy array
 img = img.reshape(1,32,32,3)
+
+# This function predicts what the image is and returns the prediction
+# runtime
 label = model.predict(img)
 
+# This will convert the output into a float which will allow it to be
+# compared to see which class an image belongs to
 output = float(label[0][0])
+
+# This variable will hold the name of the class that the image is
+# predicted to be in
 prediction = "None"
 
+# The if statements below takes the model's predicted value and
+# categorizes it into which ever class it falls into
 if (output > 0.9 and output < 1.0):
     prediction = "Airplane"
 if (output > 0.0010 and output < 0.0025):
@@ -79,6 +101,8 @@ if (output > 1.0e-09 and output < 9.0e-08):
 if (output > 0.01 and output < 0.5):
     prediction = "Truck"
 
+# These three print statements will output the image picked by the
+# user, the model's prediction value, and the predicted class
 print(image_picked)
 print(output)
 print(prediction)

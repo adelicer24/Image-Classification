@@ -94,9 +94,11 @@ with open('image.txt', 'r') as image:
 # Output stores the predicted value given by the model for the image
 # chosen by the user 
 output = prediction_values[url]
+
 # Runtime stores the runtime of the model when predicting the image
 # chosen by the user
 runtime = prediction_runtime[url]
+
 # This variable will hold the name of the class that the image is
 # predicted to be in
 prediction = "None"
