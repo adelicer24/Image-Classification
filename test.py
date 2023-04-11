@@ -4,6 +4,7 @@
 # This python file can be used by the user to test different images
 # on the model to be predicted
 
+# These are the imports necessary to test my model
 from keras.models import load_model
 from tensorflow.keras.utils import load_img
 import numpy as np

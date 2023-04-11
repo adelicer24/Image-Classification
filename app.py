@@ -1,7 +1,10 @@
 # This python file is the web application part of my software which
 # contains all the routes to the different html pages
 
-from flask import Flask, render_template, request, redirect, url_for
+# These are the imports necessary to run my web app
+from flask import Flask, render_template, request, redirect
+
+# This import is necessary to run my dict.py file through my web app
 import os
 
 app = Flask(__name__)
