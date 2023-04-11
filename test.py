@@ -58,7 +58,7 @@ images = ['static/css/images/airplane1.jpg',
           'static/css/images/truck4.jpg']
 
 # This variable will store the image picked by the user
-image_picked = images[33]
+image_picked = images[0]
 
 # This function will load the image picked and compress it down to
 # 32 by 32
