@@ -1,3 +1,8 @@
+# This python file contains the information that is displayed to the
+# user on the web app side of my software
+
+# This dictionary stores the image oaths and their predicted values
+# given by my model
 prediction_values = {'static/css/images/airplane1.jpg': 0.9999990463256836,
                      'static/css/images/airplane2.jpg': 0.9985594153404236,
                      'static/css/images/airplane3.jpg': 0.994929850101471,
@@ -39,6 +44,8 @@ prediction_values = {'static/css/images/airplane1.jpg': 0.9999990463256836,
                      'static/css/images/truck3.jpg': 0.47711536288261414,
                      'static/css/images/truck4.jpg': 0.015482001937925816}
 
+# This dictionary stores the image paths and the model's runtime when
+# predicting them
 prediction_runtime = {'static/css/images/airplane1.jpg': '0s 417ms/step',
                      'static/css/images/airplane2.jpg': '0s 293ms/step',
                      'static/css/images/airplane3.jpg': '0s 466ms/step',
@@ -80,13 +87,22 @@ prediction_runtime = {'static/css/images/airplane1.jpg': '0s 417ms/step',
                      'static/css/images/truck3.jpg': '0s 356ms/step',
                      'static/css/images/truck4.jpg': '0s 244ms/step'}
 
+# This retrieves the path of the image chosen by the user
 with open('image.txt', 'r') as image:
     url = image.read()
 
+# Output stores the predicted value given by the model for the image
+# chosen by the user 
 output = prediction_values[url]
+# Runtime stores the runtime of the model when predicting the image
+# chosen by the user
 runtime = prediction_runtime[url]
+# This variable will hold the name of the class that the image is
+# predicted to be in
 prediction = "None"
 
+# The if statements below takes the model's predicted value and
+# categorizes it into which ever class it falls into
 if (output > 0.9 and output < 1.0):
     prediction = "Airplane"
 if (output > 0.0010 and output < 0.0025):
@@ -108,12 +124,10 @@ if (output > 1.0e-09 and output < 9.0e-08):
 if (output > 0.01 and output < 0.5):
     prediction = "Truck"
 
-print(url)
-print(prediction)
-print(runtime)
-
+# This writes the model's prediction in a txt file
 with open('prediction.txt', 'w') as f:
     f.write(prediction)
 
+# This writes the model's runtime in a txt file
 with open('runtime.txt', 'w') as f:
     f.write(runtime)
