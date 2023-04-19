@@ -105,30 +105,32 @@ prediction = "None"
 
 # The if statements below takes the model's predicted value and
 # categorizes it into which ever class it falls into
-if (output > 0.9 and output < 1.0):
-    prediction = "Airplane"
-if (output > 0.0010 and output < 0.0025):
-    prediction = "Bird"
-if (output > 1.0e-05 and output < 6.0e-05):
-    prediction = "Car"
-if (output > 5.0e-6 and output < 9.0e-6):
-    prediction = "Cat"
-if (output > 3.0e-11 and output < 6.0e-10):
-    prediction = "Dog"
-if (output > 1.0e-15 and output < 4.0e-15):
-    prediction = "Deer"
-if (output > 8.0e-14 and output < 9.0e-12):
-    prediction = "Frog"
-if (output > 1.5e-07 and output < 2.0e-06):
-    prediction = "Horse"
-if (output > 1.0e-09 and output < 9.0e-08):
-    prediction = "Ship"
-if (output > 0.01 and output < 0.5):
-    prediction = "Truck"
+def predictTranslator(output):
+    if (output> 0.9 and output< 1.0):
+        prediction = "Airplane"
+    if (output> 0.0010 and output< 0.0025):
+        prediction = "Bird"
+    if (output> 1.0e-05 and output< 6.0e-05):
+        prediction = "Car"
+    if (output> 5.0e-6 and output< 9.0e-6):
+        prediction = "Cat"
+    if (output> 3.0e-11 and output< 6.0e-10):
+        prediction = "Dog"
+    if (output> 1.0e-15 and output< 4.0e-15):
+        prediction = "Deer"
+    if (output> 8.0e-14 and output< 9.0e-12):
+        prediction = "Frog"
+    if (output> 1.5e-07 and output< 2.0e-06):
+        prediction = "Horse"
+    if (output> 1.0e-09 and output< 9.0e-08):
+        prediction = "Ship"
+    if (output> 0.01 and output< 0.5):
+        prediction = "Truck"
+    return prediction
 
 # This writes the model's prediction in a txt file
 with open('prediction.txt', 'w') as f:
-    f.write(prediction)
+    f.write(predictTranslator(output))
 
 # This writes the model's runtime in a txt file
 with open('runtime.txt', 'w') as f:
